@@ -1,4 +1,4 @@
-# (NaviSight) AI Assistive Object Detection for Visually Impaired Users
+# Perceva: AI-Powered Object Detection for Visually Impaired Users
 
 ##  Overview
 This project aims to help visually impaired individuals navigate their environment using AI-based object detection and audio feedback. The system detects objects around the user and provides real-time voice guidance.
