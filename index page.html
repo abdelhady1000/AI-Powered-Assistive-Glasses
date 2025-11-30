@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perceva | AI-Powered Smart Glasses</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/cc3140ab58.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Animated gradient text */
+    @keyframes gradient-move {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animated-gradient {
+      background: linear-gradient(90deg, #7f13ec, #5120f5, #ff3b84);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-move 5s ease infinite;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- NAVBAR -->
+  <header class="flex items-center justify-between border-b border-[#302839] px-10 py-4 sticky top-0 z-50 bg-[#141118]">
+    <div class="flex items-center gap-4 text-white">
+      <div class="text-5xl md:text-6xl font-black tracking-tight animated-gradient">
+        <i class="fa-solid fa-eye"></i>
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-black tracking-tight animated-gradient">
+        Perceva
+      </h1>
+    </div>
+
+    <nav class="flex items-center gap-8 text-base font-medium">
+      <a href="index.html" class="hover:text-[#ff3b84]">Home</a>
+      <a href="index.html#mission" class="hover:text-[#ff3b84]">Our Mission</a>
+      <a href="how.html" class="hover:text-[#ff3b84]">How It Works</a>
+      <a href="products.html" class="hover:text-[#ff3b84]">Products</a>
+      <a href="contact.html" class="hover:text-[#ff3b84]">Contact</a>
+    </nav>
+
+    <button class="getStartedBtn gradient-btn text-white font-bold px-6 py-2 rounded-lg transition-all">
+      Get Started
+    </button>
+  </header>
