@@ -1,0 +1,29 @@
+path: /content/drive/MyDrive/coco_yolo_project/dataset
+train: images/train
+val: images/val
+
+nc: 22
+
+names:
+  0: person
+  1: car
+  2: bus
+  3: bicycle
+  4: motorcycle
+  5: traffic light
+  6: chair
+  7: couch
+  8: tv
+  9: cup
+  10: bottle
+  11: cell phone
+  12: book
+  13: toilet
+  14: train
+  15: umbrella
+  16: fork
+  17: spoon
+  18: microwave
+  19: stop sign
+  20: fire hydrant
+  21: bench
