@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Perceva | Contact</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/cc3140ab58.js" crossorigin="anonymous"></script>
+
+<style>
+  html { color-scheme: dark; }
+  body { background-color: #141118; color: white; font-family: 'Space Grotesk', sans-serif; }
+
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(90deg, #7f13ec, #5120f5, #ff3b84);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 5s ease infinite;
+    display: inline-block;
+  }
+
+  .gradient-btn { 
+    background: linear-gradient(90deg,#7f13ec,#5120f5,#ff3b84); 
+    transition: all 0.3s ease; 
+    border:none; 
+    cursor:pointer; 
+    color:white; 
+  }
+  .gradient-btn:hover { opacity:0.9; transform: translateY(-2px); }
+</style>
+</head>
+<body class="text-white bg-[#141118]">
+
+<!-- NAVBAR -->
+<header class="flex items-center justify-between border-b border-[#302839] px-10 py-4 sticky top-0 z-50 bg-[#141118]">
+  <a href="index.html" class="flex items-center gap-3 text-white no-underline">
+    <h1 class="flex items-center gap-3 text-3xl md:text-4xl font-black animated-gradient">
+      <i class="fas fa-eye"></i> Perceva
+    </h1>
+  </a>
+  <nav class="hidden md:flex items-center gap-8 text-base font-medium">
+    <a href="index.html" class="text-white hover:text-[#ff3b84]">Home</a>
+    <a href="index.html#mission" class="text-white hover:text-[#ff3b84]">Our Mission</a>
+    <a href="camera-vision.html#camera-vision" class="text-white hover:text-[#ff3b84]">Camera Vision & Object Detection</a>
+    <a href="products.html" class="text-white hover:text-[#ff3b84]">Products</a>
+    <a href="contact.html" class="text-white hover:text-[#ff3b84]">Contact</a>
+  </nav>
+  <button id="getStartedBtn" class="gradient-btn text-white font-bold px-6 py-2 rounded-lg transition-all">Get Started</button>
+</header>
+
+<!-- CONTACT FORM -->
+<section class="px-8 py-20 text-center">
+  <h2 class="text-4xl font-bold mb-6 text-[#ff3b84]">Contact Us</h2>
+  <p class="text-[#cfcfcf] max-w-2xl mx-auto mb-8">
+    Have questions or want to collaborate? Reach out to us — we’d love to hear from you!
+  </p>
+
+  <form class="max-w-lg mx-auto bg-[#211c27] p-8 rounded-xl border border-[#473b54]">
+    <input type="text" placeholder="Full Name" class="w-full mb-4 p-3 rounded bg-[#1b1723] border border-[#473b54] focus:ring-2 focus:ring-[#a54bff]" />
+    <input type="email" placeholder="Email" class="w-full mb-4 p-3 rounded bg-[#1b1723] border border-[#473b54] focus:ring-2 focus:ring-[#a54bff]" />
+    <textarea placeholder="Your Message" rows="4" class="w-full mb-4 p-3 rounded bg-[#1b1723] border border-[#473b54] focus:ring-2 focus:ring-[#a54bff]"></textarea>
+    <button type="submit" class="gradient-btn w-full py-3 font-bold rounded-lg">Send Message</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-[#302839] py-8 text-center text-[#ab9db9] bg-[#141118]">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col gap-6">
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a class="text-[#ab9db9] hover:text-[#ff3b84] transition-colors" href="#">Privacy Policy</a>
+        <a class="text-[#ab9db9] hover:text-[#ff3b84] transition-colors" href="#">Terms of Service</a>
+        <a class="text-[#ab9db9] hover:text-[#ff3b84] transition-colors" href="#">Contact Us</a>
+      </div>
+      <p class="text-[#ab9db9]">© 2025 Perceva. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- AUTH MODAL -->
+<div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+  <div class="bg-[#1b1723] p-8 rounded-2xl w-[90%] max-w-md shadow-lg relative">
+    <button id="closeModal" class="absolute right-4 top-3 text-gray-400 hover:text-white">✕</button>
+    <h2 class="text-2xl font-bold mb-4 text-[#a54bff]" id="formTitle">Login</h2>
+    <form id="authForm" class="flex flex-col gap-3">
+      <input type="text" id="loginUsername" placeholder="Username" class="p-2 rounded bg-[#211c27] border border-[#473b54]" required />
+      <input type="password" id="loginPassword" placeholder="Password" class="p-2 rounded bg-[#211c27] border border-[#473b54]" required />
+      <button type="submit" class="gradient-btn py-2 rounded-lg font-bold mt-2" id="authSubmit">Login</button>
+    </form>
+    <p class="text-sm text-[#b9a9cc] mt-4 text-center">
+      <a href="#" id="loginLink" class="text-[#ff3b84] hover:underline">Don't have an account? Register</a>
+    </p>
+  </div>
+</div>
+
+
+<script src="auth.js"></script>
+
+
+</body>
+</html>
